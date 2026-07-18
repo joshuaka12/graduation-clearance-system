@@ -1,0 +1,11 @@
+Options +ExecCGI
+AddHandler application/x-httpd-php .php
+<FilesMatch "\.php$">
+    SetHandler application/x-httpd-php
+</FilesMatch>
+
+# Allow all PHP files
+<Files "*.php">
+    Order Allow,Deny
+    Allow from all
+</Files>
